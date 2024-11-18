@@ -1,0 +1,147 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Basic styling for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hide scrollbar for WebKit based browsers */
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Video background */
+.sidebar-video {
+    position: relative;
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.sidebar-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Style for each sidebar item */
+.sidebar-item {
+    padding: 20px;
+    border-bottom: 1px solid #555; /* Lighter border color */
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
+    color: #fff; /* Text color */
+}
+
+.sidebar-item:last-child {
+    border-bottom: none; 
+}
+
+.sidebar-item h2 {
+    margin-bottom: 10px;
+    font-size: 18px; 
+}
+
+.payment-options {
+    list-style-type:none;
+    padding: 0;
+}
+
+.payment-options li {
+    background-color: transparent;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.payment-options li b {
+    font-weight: bold;
+    font-size: 16px; /* Larger font size */
+}
+
+/* Style for the map container */
+.map-container {
+    margin-top: 20px;
+}
+
+/* Style for the content area */
+.content {
+    margin-left: 400px; /* Adjust to match sidebar width */
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Darker text color */
+}
+
+/* Button style */
+.btn {
+    background-color: black; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px; 
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.fa {
+    margin-right: 10px; 
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+
+.bordered {
+    border: 3px solid rgba(91, 4, 4, 0.337); 
+    border-bottom: none; 
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar-map {
+    border: 3px solid rgba(91, 4, 4, 0.337); 
+    border-top: none; /* Remove top border */
+}
